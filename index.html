@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es-PE">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mundo Aove · Aceite de Oliva Tacna</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&family=Plus+Jakarta+Sans:wght@300;500;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Notre CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container header-flex">
+            <div class="logo">Mundo Aove<span> · Tacna</span></div>
+            <nav>
+                <a href="index.html">Inicio</a>
+                <a href="acerca.html">Acerca de</a>
+                <a href="contacto.html">Contacto</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- HERO -->
+        <section class="hero">
+            <div class="container">
+                <h1>Aceite de Oliva Extra Virgen<br>de Tacna para el Perú</h1>
+                <p>Directo del productor, cosecha 2025. Puro, natural y lleno de sabor.</p>
+                <a href="#productos" class="btn">Ver productos →</a>
+            </div>
+        </section>
+
+        <!-- NOS VALEURS -->
+        <section class="valeurs">
+            <div class="container">
+                <h2 class="section-title">Nuestros compromisos</h2>
+                <div class="valeurs-grid">
+                    <div class="valeur-card">
+                        <div class="valeur-icone">🌿</div>
+                        <h3>Extracción en frío</h3>
+                        <p>Conservamos todas las propiedades.</p>
+                    </div>
+                    <div class="valeur-card">
+                        <div class="valeur-icone">🌳</div>
+                        <h3>Aceitunas de Tacna</h3>
+                        <p>Cultivadas con tradición.</p>
+                    </div>
+                    <div class="valeur-card">
+                        <div class="valeur-icone">🏆</div>
+                        <h3>Calidad garantizada</h3>
+                        <p>100% extra virgen.</p>
+                    </div>
+                    <div class="valeur-card">
+                        <div class="valeur-icone">💚</div>
+                        <h3>Amor por lo nuestro</h3>
+                        <p>Productores locales, entrega en todo Perú.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PRODUITS -->
+        <section class="produits" id="productos">
+            <div class="container">
+                <h2 class="section-title reveal">Nuestros formatos</h2>
+                <div class="product-grid" id="productos-grid">
+                    <!-- Les produits seront injectés par products.js -->
+                </div>
+            </div>
+        </section>
+
+        <!-- PANIER + FORMULAIRE DE COMMANDE -->
+        <section class="cart-section">
+            <div class="container">
+                <div class="cart-header">
+                    <i class="fas fa-shopping-bag"></i>
+                    <h2>Tu pedido</h2>
+                </div>
+
+                <div id="pedido-contenido">
+                    <ul id="lista-pedido"></ul>
+                    <div id="total" class="cart-total">S/ 0.00</div>
+
+                    <!-- Formulaire de commande complet -->
+                    <form id="form-pedido">
+                        <h3>Información personal</h3>
+                        <div class="form-grid">
+                            <div class="campo">
+                                <label for="nombre">Nombre *</label>
+                                <input type="text" id="nombre" required placeholder="Ej: Juan">
+                            </div>
+                            <div class="campo">
+                                <label for="apellido">Apellido *</label>
+                                <input type="text" id="apellido" required placeholder="Ej: Pérez">
+                            </div>
+                        </div>
+
+                        <div class="form-grid">
+                            <div class="campo">
+                                <label for="email">Email *</label>
+                                <input type="email" id="email" required placeholder="ejemplo@correo.com">
+                            </div>
+                            <div class="campo">
+                                <label for="telefono">Teléfono / Celular *</label>
+                                <input type="tel" id="telefono" required placeholder="Ej: 987 654 321">
+                            </div>
+                        </div>
+
+                        <h3>Dirección de envío</h3>
+                        <div class="form-grid">
+                            <div class="campo full-width">
+                                <label for="direccion">Dirección (calle, número, urbanización) *</label>
+                                <input type="text" id="direccion" required placeholder="Ej: Calle Arica 456, Urb. San Martín">
+                            </div>
+                        </div>
+                        <div class="form-grid">
+                            <div class="campo">
+                                <label for="ciudad">Ciudad *</label>
+                                <input type="text" id="ciudad" required placeholder="Tacna" value="Tacna">
+                            </div>
+                            <div class="campo">
+                                <label for="region">Región</label>
+                                <input type="text" id="region" placeholder="Ej: Tacna">
+                            </div>
+                            <div class="campo">
+                                <label for="codigo_postal">Código postal</label>
+                                <input type="text" id="codigo_postal" placeholder="Ej: 23000">
+                            </div>
+                        </div>
+
+                        <h3>Opciones de envío y pago</h3>
+                        <div class="form-grid">
+                            <div class="campo">
+                                <label for="tipo_envio">Tipo de envío *</label>
+                                <select id="tipo_envio" required>
+                                    <option value="">Selecciona...</option>
+                                    <option value="tacna">Entrega en Tacna (gratis, mismo día)</option>
+                                    <option value="nacional">Envío a otra ciudad (cliente elige transportista)</option>
+                                </select>
+                            </div>
+                            <div class="campo">
+                                <label for="metodo_pago">Método de pago *</label>
+                                <select id="metodo_pago" required>
+                                    <option value="">Selecciona...</option>
+                                    <option value="yape">Yape</option>
+                                    <option value="plin">Plin</option>
+                                    <option value="efectivo">Efectivo (al recibir)</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="campo">
+                            <label for="notas">Notas adicionales (opcional)</label>
+                            <textarea id="notas" rows="3" placeholder="Ej: Prefiero pagar con Yape, llamar antes de entregar, etc."></textarea>
+                        </div>
+
+                        <!-- Informations complémentaires sur l'envoi -->
+                        <div class="info-envio">
+                            <p>🚚 Información de envío:</p>
+                            <ul>
+                                <li>Para <strong>Tacna</strong>: entregamos el mismo día sin costo adicional.</li>
+                                <li>Para otras ciudades: puedes elegir el transportista de tu preferencia (Olva, Shalom, etc.) y coordinamos el envío. El costo corre por cuenta del cliente.</li>
+                                <li>Te contactaremos para confirmar el pedido y acordar los detalles.</li>
+                            </ul>
+                        </div>
+
+                        <button type="button" class="btn-whatsapp" id="enviar-pedido">
+                            <i class="fab fa-whatsapp"></i> Enviar pedido por WhatsApp
+                        </button>
+                    </form>
+                </div>
+
+                <div id="pedido-vacio" class="pedido-vacio">
+                    <i class="fas fa-box-open"></i>
+                    <p><strong>Selecciona tus botellas</strong></p>
+                    <p>Elige los productos que deseas y los llevamos a tu casa.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 Mundo Aove · Aceite de Oliva Tacna · Productor local</p>
+            <p><a href="#">Términos y condiciones</a> · <a href="#">Política de privacidad</a></p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script type="module" src="js/app.js"></script>
+</body>
+</html>
