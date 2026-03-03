@@ -1,7 +1,7 @@
 // js/tracking.js
 import { generarIdUnico } from './utils.js';
 
-const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzXaLqKT_eCc0Verp0BBXDjyIuPFytRw7k5DxZDEkxZPsdR8nA6Qmq6LPaTplZlhd03Ow/exec';
+const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbw6Vku2nynxVFgl0PhNKUgXGn2eaFlWRdmSXdwW8JfZNa7mmt4S2q-qm7k0MOZH0TkB/exec';
 
 /**
  * Enregistre une visite dans Google Sheets
